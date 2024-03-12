@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>two offcanvas</title>
+  <!--  BOOTSTRAP CSS  -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- CSS -->
+  <!--  FONT CSS -->
+  <link rel="stylesheet" href="style/css/font.css">
+
+
+</head>
+
+<body>
+
+<!-- Açma Linki -->
+<a href="#" id="openFirstOffcanvas">Birinci Offcanvas'ı Aç</a>
+
+<!-- Birinci Offcanvas -->
+<div class="offcanvas offcanvas-start" tabindex="-1" id="firstOffcanvas">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title">Birinci Offcanvas</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <p>Birinci offcanvas içeriği.</p>
+    <!-- İkinci Offcanvas'ı Açacak Link -->
+    <a href="#" id="openSecondOffcanvas">İkinci Offcanvas'ı Aç</a>
+  </div>
+</div>
+
+<!-- İkinci Offcanvas -->
+<div class="offcanvas offcanvas-start" tabindex="-1" id="secondOffcanvas" style="width: 200px; margin-left: 400px;">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title">İkinci Offcanvas</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <p>İkinci offcanvas içeriği.</p>
+  </div>
+</div>
+
+  <!--  SCRİPT  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Birinci Offcanvas'ı Açma Fonksiyonu
+    function openFirstOffcanvas() {
+      var firstOffcanvas = new bootstrap.Offcanvas(document.getElementById('firstOffcanvas'));
+      firstOffcanvas.show();
+    }
+  
+    // Açma Linkine Tıklandığında Birinci Offcanvas'ı Açma
+    document.getElementById('openFirstOffcanvas').addEventListener('click', function (event) {
+      event.preventDefault();
+      openFirstOffcanvas();
+    });
+  
+    // İkinci Offcanvas'ı Açma Fonksiyonu
+    function openSecondOffcanvas() {
+      var secondOffcanvas = new bootstrap.Offcanvas(document.getElementById('secondOffcanvas'));
+      secondOffcanvas.show();
+    }
+  
+    // Birinci Offcanvas'taki Link'e Tıklandığında İkinci Offcanvas'ı Açma
+    document.getElementById('openSecondOffcanvas').addEventListener('click', function (event) {
+      event.preventDefault();
+      openSecondOffcanvas();
+    });
+  </script>
+  
+</body>
+
+</html>
