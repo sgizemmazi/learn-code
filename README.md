@@ -3,4 +3,4 @@
 
 ## 🕹️ CLONE;
 - You can add this code to the terminal and let us know by adding the code you know, or you can get information that will be useful to you from here.  
-"git clone https://github.com/sgizemmazi/my-custom-examples.git"
+"git clone https://github.com/sgizemmazi/learn-code.git"
